@@ -1,0 +1,155 @@
+:root {
+  --black: #000000;
+  --White: #ffffff;
+  --La-Palma: #42940f;
+  --mine-shaft: #2f2f2f;
+  --Tundora: #4e4e4e;
+  --Verdun-Green: #1f5200;
+  --Classic-Rose: #fdcff3;
+  --Golden-Tainoi: #ffcf56;
+  --main-color: #f6f6f6;
+  --main-shadow: rgba(0, 0, 0, 0.18);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.products {
+  padding: 40px 0px 72px;
+  background-color: var(--main-color);
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1210px;
+}
+
+.products__title {
+  text-align: center;
+  margin-bottom: 48px;
+  font-weight: 900;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+  list-style-type: none;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 45px -4px var(--main-shadow);
+  border-radius: 12px;
+}
+
+.products__list-item {
+  min-width: 290px;
+  max-width: 380px;
+  list-style-type: none;
+}
+
+.product-card__media {
+  display: flex;
+  position: relative;
+}
+.product-card__media-image {
+  border-radius: 12px 12px 0 0;
+}
+
+.product-card__media-markers-list {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: calc(100% - 32px);
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 16px;
+}
+
+.product-card__marker {
+  padding: 0 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: var(--Classic-Rose);
+  border-radius: 8px;
+  color: var(--mine-shaft);
+}
+
+.product-card__marker--last-product {
+  background-color: var(--Golden-Tainoi);
+}
+
+.product-card__text-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+
+.product-card__title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--mine-shaft);
+}
+
+.product-card__description {
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: var(--mine-shaft);
+}
+
+.product-card__button {
+  margin-top: auto;
+}
+
+.button {
+  width: 100%;
+  padding: 12px 6px;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--La-Palma);
+  background-color: var(--White);
+  border: 2px solid var(--La-Palma);
+  border-radius: 8px;
+  transition: 0.3s color ease, 0.3s background-color ease,
+    0.3s border-color ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--White);
+  background-color: var(--La-Palma);
+}
+
+.button:active {
+  color: var(--White);
+  background-color: var(--Verdun-Green);
+  border-color: var(--Verdun-Green);
+}
+
+.button:disabled {
+  color: var(--White);
+  border-color: var(--Tundora);
+  background-color: var(--Tundora);
+  cursor: default;
+}
